@@ -1,6 +1,6 @@
 # Apple Website Clone (Frontend)
 
-![Apple Clone Screenshot](readme1.png)
+![Apple Clone Screenshot](./public/readme1.png)
 
 ## Description
 This is a **frontend clone of the Apple website** built using **Angular** and Tailwind. The project replicates the look and feel of Apple's official site, including navigation, product sections, and responsive design.
