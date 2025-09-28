@@ -1,0 +1,50 @@
+<nav #navBar class="fixed top-0 w-full bg-black bg-opacity-90 text-white z-50 shadow-md h-20 flex items-center transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+
+    <a routerLink="/" class="flex items-center">
+      <i class="fa-brands fa-apple text-2xl text-white pl-4"></i>
+    </a>
+
+    <ul #navLinks class="hidden md:flex space-x-6 text-sm items-center">
+      <li #navLink><a routerLink="/mac" class="hover:text-gray-300 transition">Mac</a></li>
+      <li #navLink><a routerLink="/ipad" class="hover:text-gray-300 transition">iPad</a></li>
+      <li #navLink><a routerLink="/iphone" class="hover:text-gray-300 transition">iPhone</a></li>
+      <li #navLink><a routerLink="/watch" class="hover:text-gray-300 transition">Watch</a></li>
+      <li #navLink><a routerLink="/airpods" class="hover:text-gray-300 transition">AirPods</a></li>
+      <li #navLink><a routerLink="/tv-home" class="hover:text-gray-300 transition">TV & Home</a></li>
+      <li #navLink><a routerLink="/entertainment" class="hover:text-gray-300 transition">Entertainment</a></li>
+      <li #navLink><a routerLink="/support" class="hover:text-gray-300 transition">Support</a></li>
+    </ul>
+
+    <div class="flex items-center space-x-6">
+ 
+     <i 
+    class="fa-brands fa-apple-pay text-3xl wiggle-hover" 
+    (mouseenter)="goToApplePay()"
+    style="cursor: pointer;"
+  ></i>
+
+      <i class="fa-solid fa-right-to-bracket wiggle-hover"></i>
+
+      <button class="md:hidden flex flex-col space-y-1 focus:outline-none" (click)="toggleMenu()">
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div *ngIf="menuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40" (click)="toggleMenu()"></div>
+
+<div #mobileMenu *ngIf="menuOpen" class="fixed top-0 left-0 h-full w-64 bg-black text-white z-50 flex flex-col px-6 py-8 space-y-6">
+
+  <a routerLink="/mac" class="hover:text-gray-300 transition">Mac</a>
+  <a routerLink="/ipad" class="hover:text-gray-300 transition">iPad</a>
+  <a routerLink="/iphone" class="hover:text-gray-300 transition">iPhone</a>
+  <a routerLink="/watch" class="hover:text-gray-300 transition">Watch</a>
+  <a routerLink="/airpods" class="hover:text-gray-300 transition">AirPods</a>
+  <a routerLink="/tv-home" class="hover:text-gray-300 transition">TV & Home</a>
+  <a routerLink="/entertainment" class="hover:text-gray-300 transition">Entertainment</a>
+  <a routerLink="/support" class="hover:text-gray-300 transition">Support</a>
+</div>

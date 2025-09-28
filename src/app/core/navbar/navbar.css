@@ -1,0 +1,26 @@
+/* Wiggle keyframes */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Wiggle class */
+.wiggle-hover:hover {
+  animation: wiggle 0.6s ease-in-out;
+  transform-origin: center; /* rotate around center */
+}
+/* navbar.css */
+.navbar-item {
+  pointer-events: auto; /* ensures links/icons are clickable */
+  z-index: 51;          /* higher than overlay */
+}
+
+.navbar-overlay {
+  pointer-events: all;  /* only overlay can be clicked */
+  z-index: 50;
+}
